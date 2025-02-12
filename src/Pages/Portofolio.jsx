@@ -126,10 +126,80 @@ const techStacks = [
   { icon: "mysql1.svg", language: "MySQL" },
 ];
 
+const projects = [
+  {
+      image:"https://www.clickslice.co.uk/wp-content/uploads/2022/07/1_Pdw7h5X6vQQNVopIzHBG6A.jpeg",
+      name: "URL Shortener",
+      description: "A web application to shorten long URLs with analytics features.",
+      tech: "React, Node.js, Express.js, MongoDB, Tailwind CSS",
+      link: "https://link-shorten-two-gx8i.vercel.app/"
+  },
+  {
+      image:"https://raw.githubusercontent.com/FabianCruz-0/Calculator-JS-Web-Design/main/goal-design/desktop.jpg",
+      name: "Calculator",
+      description: "Build calculator I spend time one day for build this calculator and my calculator got top.",
+      tech: "HTML, Javascript, Tailwind CSS",
+      link: "https://calculator-beta-inky.vercel.app/"
+  },
+  {
+      image:"https://img.freepik.com/free-vector/watercolor-weather-effects-collection_23-2149115331.jpg",
+      name: "Weather App",
+      description: "A simple weather app that displays the current weather and forecast for a given location.",
+      tech: "React, Node.js, Express.js, MongoDB, Tailwind CSS",
+      link: "https://weather-of-g3.vercel.app/"
+      },
+      {
+        image:"https://simplonline.co/_next/image?url=https%3A%2F%2Fsimplonline-v3-prod.s3.eu-west-3.amazonaws.com%2Fmedia%2Fimage%2Fpng%2Fcleanshot-2023-10-31-at-22-50-22-at-2x-67735a035af98024505064.png&w=1280&q=75",
+        name: "E-commerce",
+        description: "Develop the back-end of a Mart Management System to handle purchases, sales, inventory, stock alerts, expiration notifications, customer loyalty points, and user role management within 3 weeks.",
+        tech: " Discord, Notion, Postman, MySQL Workbench, Git& Github,NodeJs,Prisma ORM,Cloudinary for file media storage",
+        link: "https://laiheang.jetdev.life/login"
+
+      },
+
+      {
+          image:"https://www.ui-themes.com/content/images/size/w600/2022/08/argon-dashboard-tailwind-thumb-min.jpg",
+          name: "Agro Admin",
+          description: "A web application for farmers to manage their crops, track weather, and receive notifications",
+          tech: "React,Strapi, Tailwind CSS",
+          link: "https://admin-agro-frondend.vercel.app/"
+          
+          },
+          {
+              image:"https://i2.wp.com/blog.contactpigeon.com/wp-content/uploads/2023/02/argos-omnichannel-strategy-home-page.png?w=821&ssl=1",
+              name: "Agro Market ",
+              description: "A web application for farmers to sell their products, manage orders, and track sales",
+              tech: "Javascript, html,Strapi, Tailwind CSS",
+              link: "https://agro-market-mauve.vercel.app/"
+          },
+          {
+              image:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTs8RXnWUT60pMI98A8LUd6rrhRUwHmkV_4dw&s",
+              name: "Fairy tail",
+              description: "A web application for users to read and share fairy tales",
+              tech: "Javascript, Bootstrap,HTML, CSS",
+              link: "https://fairy-tale-xi.vercel.app/index.html"
+              },
+              {
+                  image:"https://images01.nicepagecdn.com/page/87/29/website-template-preview-87293.jpg",
+                  name: "Blog post",
+                  description: "A web application for users to read and share blog posts",
+                  tech: "React Js, Tailwind CSS, Zustand",
+                  link: "https://blog-post-laihieng.vercel.app/"
+                  }
+                 
+
+
+];
+const certificate = [
+  {
+    image: "/លីណា​គឹមហៃ.pdf"
+  }
+]
+
 export default function FullWidthTabs() {
   const theme = useTheme();
   const [value, setValue] = useState(0);
-  const [projects, setProjects] = useState([]);
+  // const [projects, setProjects] = useState([]);
   const [certificates, setCertificates] = useState([]);
   const [showAllProjects, setShowAllProjects] = useState(false);
   const [showAllCertificates, setShowAllCertificates] = useState(false);
@@ -161,8 +231,8 @@ export default function FullWidthTabs() {
 
       const certificateData = certificateSnapshot.docs.map((doc) => doc.data());
 
-      setProjects(projectData);
-      setCertificates(certificateData);
+      // setProjects(projectData);
+      // setCertificates(certificateData);
 
       // Store in localStorage
       localStorage.setItem("projects", JSON.stringify(projectData));
@@ -186,7 +256,11 @@ export default function FullWidthTabs() {
     } else {
       setShowAllCertificates((prev) => !prev);
     }
-  }, []);
+  }, []);   
+  localStorage.setItem("projects", JSON.stringify(projects));
+  localStorage.setItem("certificates", JSON.stringify(certificate));
+
+
 
   const displayedProjects = showAllProjects
     ? projects
@@ -331,9 +405,9 @@ export default function FullWidthTabs() {
           <TabPanel value={value} index={0} dir={theme.direction}>
             <div className="container mx-auto flex justify-center items-center overflow-hidden">
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 2xl:grid-cols-3 gap-5">
-                {displayedProjects.map((project, index) => (
+                {displayedProjects.map((projects, index) => (
                   <div
-                    key={project.id || index}
+                    key={projects.id || index}
                     data-aos={
                       index % 3 === 0
                         ? "fade-up-right"
@@ -350,11 +424,11 @@ export default function FullWidthTabs() {
                     }
                   >
                     <CardProject
-                      Img={project.Img}
-                      Title={project.Title}
-                      Description={project.Description}
-                      Link={project.Link}
-                      id={project.id}
+                      Img={projects.image}
+                      Title={projects.name}
+                      Description={projects.description}
+                      Link={projects.link}
+                      id={projects.tech}
                     />
                   </div>
                 ))}

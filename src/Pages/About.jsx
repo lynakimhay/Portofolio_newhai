@@ -115,8 +115,8 @@ const StatCard = memo(({ icon: Icon, color, value, label, description, animation
 const AboutPage = () => {
   // Memoized calculations
   const { totalProjects, totalCertificates, YearExperience } = useMemo(() => {
-    const storedProjects = JSON.parse(localStorage.getItem("projects") || "[]");
-    const storedCertificates = JSON.parse(localStorage.getItem("certificates") || "[]");
+    const storedProjects = JSON.parse(localStorage.getItem("projects") ?? "[]");
+    const storedCertificates = JSON.parse(localStorage.getItem("certificate") ?? "[]");
     
     const startDate = new Date("2023-01-01");
     const today = new Date();
@@ -124,8 +124,8 @@ const AboutPage = () => {
       (today < new Date(today.getFullYear(), startDate.getMonth(), startDate.getDate()) ? 1 : 0);
 
     return {
-      // totalProjects: storedProjects.length,
-      // totalCertificates: storedCertificates.length,
+      totalProjects: storedProjects.length,
+      totalCertificates: storedCertificates.length,
       YearExperience: experience
     };
   }, []);
@@ -214,10 +214,8 @@ const AboutPage = () => {
               data-aos="fade-right"
               data-aos-duration="1500"
             >
-              seorang siswa Teknik Jaringan Komputer dan Telekomunikasi yang
-              tertarik dalam pengembangan Front-End. Saya berfokus pada
-              menciptakan pengalaman digital yang menarik dan selalu berusaha
-              memberikan solusi terbaik dalam setiap proyek.
+              I specialize in creating web applications and ensuring seamless user experiences.
+              A passionate developer with a love for crafting clean, efficient code and solving complex problems.
             </p>
 
             <div className="flex flex-col lg:flex-row items-center lg:items-start gap-4 lg:gap-4 lg:px-0 w-full">
