@@ -7,6 +7,7 @@ import Swal from "sweetalert2";
 import AOS from "aos";
 import "aos/dist/aos.css";
 
+
 const ContactPage = () => {
   const [formData, setFormData] = useState({
     name: "",
@@ -131,7 +132,7 @@ const ContactPage = () => {
             </div>
 
             <form 
-              action="https://formsubmit.co/ekizulfarrachman@gmail.com"
+              action="https://formsubmit.co/nakimhay.ly@institute.pse.ngo"
               method="POST"
               onSubmit={handleSubmit}
               className="space-y-6"

@@ -10,7 +10,7 @@ const TECH_ICONS = {
   React: Globe,
   Tailwind: Layout,
   Express: Cpu,
-  Python: Code,
+  // Python: Code,
   Javascript: Code,
   HTML: Code,
   CSS: Code,
@@ -110,7 +110,7 @@ const ProjectDetails = () => {
         ...selectedProject,
         Features: selectedProject.Features || [],
         TechStack: selectedProject.TechStack || [],
-        Github: selectedProject.Github || 'https://github.com/EkiZR',
+        Github: selectedProject.Github || 'https://github.com/lynakimhay',
       };
       setProject(enhancedProject);
     }
