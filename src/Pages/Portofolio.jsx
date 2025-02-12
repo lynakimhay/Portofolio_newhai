@@ -145,13 +145,13 @@ export default function FullWidthTabs() {
 
   const fetchData = useCallback(async () => {
     try {
-      // const projectCollection = collection(db, "projects");
-      // const certificateCollection = collection(db, "certificates");
+      const projectCollection = collection(db, "projects");
+      const certificateCollection = collection(db, "certificates");
 
-      // const [projectSnapshot, certificateSnapshot] = await Promise.all([
-      //   getDocs(projectCollection),
-      //   getDocs(certificateCollection),
-      // ]);
+      const [projectSnapshot, certificateSnapshot] = await Promise.all([
+        getDocs(projectCollection),
+        getDocs(certificateCollection),
+      ]);
 
       const projectData = projectSnapshot.docs.map((doc) => ({
         id: doc.id,

@@ -147,7 +147,7 @@ const SocialLinks = () => {
                transform group-hover:translate-x-0 -translate-x-1"
           />
 
-          {/* Shine Effect */}
+          
           <div className="absolute inset-0 opacity-0 group-hover:opacity-100 pointer-events-none overflow-hidden">
             <div
               className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent
