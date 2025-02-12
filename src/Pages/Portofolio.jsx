@@ -190,9 +190,9 @@ const projects = [
 
 
 ];
-const certificate = [
+const certificates = [
   {
-    image: "/លីណា​គឹមហៃ.pdf"
+    image: "/លីណា គឹមហៃ_page-0001.jpg"
   }
 ]
 
@@ -200,7 +200,7 @@ export default function FullWidthTabs() {
   const theme = useTheme();
   const [value, setValue] = useState(0);
   // const [projects, setProjects] = useState([]);
-  const [certificates, setCertificates] = useState([]);
+  // const [certificates, setCertificates] = useState([]);
   const [showAllProjects, setShowAllProjects] = useState(false);
   const [showAllCertificates, setShowAllCertificates] = useState(false);
   const isMobile = window.innerWidth < 768;
@@ -258,7 +258,7 @@ export default function FullWidthTabs() {
     }
   }, []);   
   localStorage.setItem("projects", JSON.stringify(projects));
-  localStorage.setItem("certificates", JSON.stringify(certificate));
+  localStorage.setItem("certificate", JSON.stringify(certificates));
 
 
 
@@ -447,7 +447,7 @@ export default function FullWidthTabs() {
           <TabPanel value={value} index={1} dir={theme.direction}>
             <div className="container mx-auto flex justify-center items-center overflow-hidden">
               <div className="grid grid-cols-1 md:grid-cols-3 md:gap-5 gap-4">
-                {displayedCertificates.map((certificate, index) => (
+                {displayedCertificates.map((certificates, index) => (
                   <div
                     key={index}
                     data-aos={
@@ -465,7 +465,7 @@ export default function FullWidthTabs() {
                         : "1000"
                     }
                   >
-                    <Certificate ImgSertif={certificate.Img} />
+                    <Certificate ImgSertif={certificates.image} />
                   </div>
                 ))}
               </div>

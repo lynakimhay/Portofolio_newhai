@@ -116,7 +116,7 @@ const AboutPage = () => {
   // Memoized calculations
   const { totalProjects, totalCertificates, YearExperience } = useMemo(() => {
     const storedProjects = JSON.parse(localStorage.getItem("projects") ?? "[]");
-    const storedCertificates = JSON.parse(localStorage.getItem("certificate") ?? "[]");
+    const storedCertificates = JSON.parse(localStorage.getItem("certificates") ?? "[]");
     
     const startDate = new Date("2023-01-01");
     const today = new Date();
