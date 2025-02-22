@@ -132,7 +132,7 @@ const projects = [
       name: "URL Shortener",
       description: "A web application to shorten long URLs with analytics features.",
       tech: "React, Node.js, Express.js, MongoDB, Tailwind CSS",
-      link: "https://link-shorten-two-gx8i.vercel.app/"
+      link: "https://certificates-rho.vercel.app/"
   },
   {
       image:"https://raw.githubusercontent.com/FabianCruz-0/Calculator-JS-Web-Design/main/goal-design/desktop.jpg",
@@ -185,7 +185,7 @@ const projects = [
                   description: "A web application for users to read and share blog posts",
                   tech: "React Js, Tailwind CSS, Zustand",
                   link: "https://blog-post-laihieng.vercel.app/"
-                  }
+                }
                  
 
 
