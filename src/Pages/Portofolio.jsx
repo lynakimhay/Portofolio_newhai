@@ -185,6 +185,20 @@ const projects = [
                   description: "A web application for users to read and share blog posts",
                   tech: "React Js, Tailwind CSS, Zustand",
                   link: "https://blog-post-laihieng.vercel.app/"
+                },
+                {
+                  image:"https://cdn.dribbble.com/userupload/5208176/file/original-8190f5d54c1a56894135d49be44e4fa4.jpg?resize=1600x1200&vertical=center",
+                  name: "Minimal-Blog",
+                  description: "A web application for users to read and share blog posts",
+                  tech: "React Js, Tailwind CSS, Zustand",
+                  link: "https://minimal-blog-beryl.vercel.app/"
+                },
+                {
+                  image:"https://10web.io/blog/wp-content/uploads/sites/2/2024/07/bikes-online.png",
+                  name: "Selling-Bicycle",
+                  description: "A web application for users to read and share blog posts",
+                  tech: "React Js, Tailwind CSS, Zustand",
+                  link: "https://limsopheak16.github.io/Selling-Bicycle/"
                 }
                  
 
